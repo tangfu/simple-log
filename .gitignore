@@ -1,1 +1,4 @@
 *.swap
+build/*
+*~
+*.orig

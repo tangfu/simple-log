@@ -202,7 +202,7 @@ void log_print_status( log_t * this, FILE *stream )
                 return ;
 
         pthread_rwlock_rdlock( &this->lock );
-        fprintf( stream, "[log]\n\tlog_buffer_num=%d\n\tlog_total=%lld\n\tused_max_buffer=%d\n\tdrop_log_num=%d\n", LOG_BUFFER_NUM, this->total, this->data->used_max, this->data->drop_count );
+        fprintf( stream, "[log]\n\tlog_buffer_num=%d\n\tlog_total=%ld\n\tused_max_buffer=%d\n\tdrop_log_num=%d\n", LOG_BUFFER_NUM, this->total, this->data->used_max, this->data->drop_count );
         pthread_rwlock_unlock( &this->lock );
 }
 
