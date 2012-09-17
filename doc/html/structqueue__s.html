@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>LOG-LIB: queue_array结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOG-LIB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle">
+<div class="title">queue_array结构体 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> queue_array 的协作图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="structqueue__s__coll__graph.png" border="0" usemap="#queue__array_coll__map" alt="Collaboration graph"/></div>
+<map name="queue__array_coll__map" id="queue__array_coll__map">
+</map>
+<center><span class="legend">[<a href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a1199473390178848aa0ff84328dbe17b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1199473390178848aa0ff84328dbe17b"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> )(queue_array *, int, int)</td></tr>
+<tr class="memitem:ab5b3d609db0fbe86db821cdbd6077d34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab5b3d609db0fbe86db821cdbd6077d34"></a>
+void(*&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> )(queue_array *)</td></tr>
+<tr class="memitem:ada357a63f727b7f412ba0785219ec180"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada357a63f727b7f412ba0785219ec180"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> )(queue_array *, int)</td></tr>
+<tr class="memitem:a36fcca995fa2bdfecc6cc635af851857"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36fcca995fa2bdfecc6cc635af851857"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>get_size</b> )(queue_array *)</td></tr>
+<tr class="memitem:a17299310d87e542d67001afdf6dc36f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17299310d87e542d67001afdf6dc36f7"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>get_current_len</b> )(queue_array *)</td></tr>
+<tr class="memitem:a36bb488847547595cbc82683d09c5772"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36bb488847547595cbc82683d09c5772"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>in_queue</b> )(queue_array *, void *, QUEUE_TYPE)</td></tr>
+<tr class="memitem:abafaa9f09c7e3c271370049bdf5ac348"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abafaa9f09c7e3c271370049bdf5ac348"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>out_queue</b> )(queue_array *, void *, QUEUE_TYPE)</td></tr>
+<tr class="memitem:ac2a84e700f2a3ca93ca76e7a0331213b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a84e700f2a3ca93ca76e7a0331213b"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>is_empty</b> )(queue_array *)</td></tr>
+<tr class="memitem:a2bfd9f298ce69292004f579aa3cc2463"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2bfd9f298ce69292004f579aa3cc2463"></a>
+int(*&#160;</td><td class="memItemRight" valign="bottom"><b>is_full</b> )(queue_array *)</td></tr>
+<tr class="memitem:aa0246195b64447ad0ba3510f410604f4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa0246195b64447ad0ba3510f410604f4"></a>
+pthread_rwlock_t&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b></td></tr>
+<tr class="memitem:a0096ed68692b83dac0d5cf7cf780ad49"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0096ed68692b83dac0d5cf7cf780ad49"></a>
+sem_t&#160;</td><td class="memItemRight" valign="bottom"><b>empty</b></td></tr>
+<tr class="memitem:a827bee7e29ae7adb9ac78f0d883c8b68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a827bee7e29ae7adb9ac78f0d883c8b68"></a>
+sem_t&#160;</td><td class="memItemRight" valign="bottom"><b>resource</b></td></tr>
+<tr class="memitem:a7cbffd3579d5d13c88a74323410581f5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7cbffd3579d5d13c88a74323410581f5"></a>
+sem_t&#160;</td><td class="memItemRight" valign="bottom"><b>reader</b></td></tr>
+<tr class="memitem:ab71275bc9f27641727e665a3cb51bfaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab71275bc9f27641727e665a3cb51bfaa"></a>
+sem_t&#160;</td><td class="memItemRight" valign="bottom"><b>writer</b></td></tr>
+<tr class="memitem:ae3ee10155d3e6bc728ed1df74e8e72bf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3ee10155d3e6bc728ed1df74e8e72bf"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memitem:a8896aa1d0fd5bc5927a7dabde5fb42a8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8896aa1d0fd5bc5927a7dabde5fb42a8"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>element_size</b></td></tr>
+<tr class="memitem:ac5d37d2bd259acaf98a8d169904966d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac5d37d2bd259acaf98a8d169904966d0"></a>
+void *&#160;</td><td class="memItemRight" valign="bottom"><b>element</b></td></tr>
+<tr class="memitem:a1c9c417c05765602eb951eae9acb6855"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c9c417c05765602eb951eae9acb6855"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>in_index</b></td></tr>
+<tr class="memitem:ab858bfbb93568565373130871fd68770"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab858bfbb93568565373130871fd68770"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>out_index</b></td></tr>
+<tr class="memitem:a3d0e1e5201b819d14b1e4c49e53a75d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d0e1e5201b819d14b1e4c49e53a75d6"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>init_flag</b></td></tr>
+<tr class="memitem:a8e5ef714198d8e63d5fce6208f33efc1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8e5ef714198d8e63d5fce6208f33efc1"></a>
+<a class="el" href="structatomic__t.html">atomic_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cur_count</b></td></tr>
+<tr class="memitem:ab1411e126a0c3a90b500ece1fe76f5cb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1411e126a0c3a90b500ece1fe76f5cb"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>used_max</b></td></tr>
+<tr class="memitem:a7bddbcf6a7c464fa8b3fc89e58a9a3ef"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7bddbcf6a7c464fa8b3fc89e58a9a3ef"></a>
+volatile int&#160;</td><td class="memItemRight" valign="bottom"><b>drop_count</b></td></tr>
+</table>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li><a class="el" href="queue_8h_source.html">queue.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2012年 九月 17日 星期一 20:59:29 , 为 LOG-LIB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

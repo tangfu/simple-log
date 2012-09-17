@@ -1,0 +1,763 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>LOG-LIB: log.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOG-LIB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">log.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>日志库  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;pthread.h&gt;</code><br/>
+<code>#include &lt;semaphore.h&gt;</code><br/>
+<code>#include &lt;signal.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+<code>#include &lt;sys/socket.h&gt;</code><br/>
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> log.h 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="log_8h__incl.png" border="0" usemap="#log_8h" alt=""/></div>
+<map name="log_8h" id="log_8h">
+</map>
+</div>
+</div>
+<p><a href="log_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:adbd3a1864448c4ccfb7d0c0f5a2d95e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adbd3a1864448c4ccfb7d0c0f5a2d95e8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_BOOL</b>&#160;&#160;&#160;int</td></tr>
+<tr class="memitem:a23e2a514f52a386f3fd82c39ec989423"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23e2a514f52a386f3fd82c39ec989423"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_TRUE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a6079d6223f475b33619f7c4f19daafd2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6079d6223f475b33619f7c4f19daafd2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_FALSE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a0285645fbf82877c3ca6d5a16883c7eb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0285645fbf82877c3ca6d5a16883c7eb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_STOP_SIGNAL</b>&#160;&#160;&#160;SIGRTMAX-5</td></tr>
+<tr class="memitem:ab8ce27deadcd610728de3a25d23e72f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab8ce27deadcd610728de3a25d23e72f7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_SOCKET_PORT_DEFAULT</b>&#160;&#160;&#160;&quot;5468&quot;</td></tr>
+<tr class="memitem:a69d4676733f5e850f451942b6d901382"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a69d4676733f5e850f451942b6d901382"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_FILE</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a7201066a7f98df69ca8f01d974dcfb53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7201066a7f98df69ca8f01d974dcfb53"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEBUG_FILE</b>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ab95f0c6f13ddeaf801e5089dc51e2a50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab95f0c6f13ddeaf801e5089dc51e2a50"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_BUFFER_NUM</b>&#160;&#160;&#160;50</td></tr>
+<tr class="memitem:abfa9b643a5ac89b6fd458fe9a09bb5bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abfa9b643a5ac89b6fd458fe9a09bb5bb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CATEGORY_LEN</b>&#160;&#160;&#160;64</td></tr>
+<tr class="memitem:af2a0fa359400979a265d34bed5dfe91d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2a0fa359400979a265d34bed5dfe91d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_LEN</b>&#160;&#160;&#160;128</td></tr>
+<tr class="memitem:a5f3552829dc4428b7e17c9cd0fee1169"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f3552829dc4428b7e17c9cd0fee1169"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RENDER_BUF_LEN</b>&#160;&#160;&#160;512</td></tr>
+<tr class="memitem:a12d3175819816bfbac081e6871e8aa07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a12d3175819816bfbac081e6871e8aa07">LOG_DEBUG_TO_CONSOLE</a>(this, fmt, arg...)&#160;&#160;&#160;{}</td></tr>
+<tr class="memitem:aff2f02c3f69acac069bf520d9d390e7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aff2f02c3f69acac069bf520d9d390e7e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG</b>(this, fmt, arg...)&#160;&#160;&#160;{}</td></tr>
+<tr class="memitem:aaf33d6c96315d02b0eac414a32dcb959"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf33d6c96315d02b0eac414a32dcb959"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG_TO_FILE</b>(this, fmt, arg...)&#160;&#160;&#160;{}</td></tr>
+<tr class="memitem:ac0186d48f8072133f619da81b82ffcfd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac0186d48f8072133f619da81b82ffcfd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_DEBUG_TO_SOCKET</b>(this, fmt, arg...)&#160;&#160;&#160;{}</td></tr>
+<tr class="memitem:ae73e3891d62058a387f3bdc3f0e74b9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ae73e3891d62058a387f3bdc3f0e74b9a">LOG_FATAL</a>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE_AND_FILE, FATAL, NULL, fmt, ##arg)</td></tr>
+<tr class="memdesc:ae73e3891d62058a387f3bdc3f0e74b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">TO_CONSOLE_AND_FILE.  <a href="#ae73e3891d62058a387f3bdc3f0e74b9a"></a><br/></td></tr>
+<tr class="memitem:ab1924b355b3d1e56dfb4194272ff7029"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1924b355b3d1e56dfb4194272ff7029"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE_AND_FILE, ERROR, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:a59feb71ba26584d903ab53e4e9e15b0a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59feb71ba26584d903ab53e4e9e15b0a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE_AND_FILE, INFO, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:ad7112cc064e0a3cf8a2dd59e02e71ea6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ad7112cc064e0a3cf8a2dd59e02e71ea6">LOG_FATAL_TO_CONSOLE</a>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE, FATAL, NULL, fmt, ##arg)</td></tr>
+<tr class="memdesc:ad7112cc064e0a3cf8a2dd59e02e71ea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">TO_CONSOLE.  <a href="#ad7112cc064e0a3cf8a2dd59e02e71ea6"></a><br/></td></tr>
+<tr class="memitem:a82a2b8f0f4263e77a99a8b855c914ac0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82a2b8f0f4263e77a99a8b855c914ac0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR_TO_CONSOLE</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE, ERROR, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:acce4461d9643346b39f7719ce3f1a21e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acce4461d9643346b39f7719ce3f1a21e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO_TO_CONSOLE</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE, INFO, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:a45ed43740e8268608070e134789ce002"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a45ed43740e8268608070e134789ce002">LOG_FATAL_TO_FILE</a>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_FILE, FATAL, NULL, fmt, ##arg)</td></tr>
+<tr class="memdesc:a45ed43740e8268608070e134789ce002"><td class="mdescLeft">&#160;</td><td class="mdescRight">TO_FILE.  <a href="#a45ed43740e8268608070e134789ce002"></a><br/></td></tr>
+<tr class="memitem:a922fe1889f43550955996cdbbefac51c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a922fe1889f43550955996cdbbefac51c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR_TO_FILE</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_FILE, ERROR, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:a1c9b7f2e7652aab64fceebafdf841d56"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1c9b7f2e7652aab64fceebafdf841d56"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO_TO_FILE</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_FILE, INFO, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:af38399d1751a7cb7946645e4951b73c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#af38399d1751a7cb7946645e4951b73c2">LOG_FATAL_TO_SOCKET</a>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_SOCKET, FATAL, NULL, fmt, ##arg)</td></tr>
+<tr class="memdesc:af38399d1751a7cb7946645e4951b73c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">TO_SOCKET.  <a href="#af38399d1751a7cb7946645e4951b73c2"></a><br/></td></tr>
+<tr class="memitem:a576d738fd3f919e2d8c5a525f386266f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a576d738fd3f919e2d8c5a525f386266f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_ERROR_TO_SOCKET</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_SOCKET, ERROR, NULL, fmt, ##arg)</td></tr>
+<tr class="memitem:ae528e964984b979bdbe3f4387b196713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae528e964984b979bdbe3f4387b196713"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>LOG_INFO_TO_SOCKET</b>(this, fmt, arg...)&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_SOCKET, INFO, NULL, fmt, ##arg)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a44c2825007d6e42357a436259c0ff027"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>log_mode</b> { <b>TO_CONSOLE</b> =  0x01, 
+<b>TO_FILE</b> =  0x02, 
+<b>TO_SOCKET</b> =  0x04, 
+<b>TO_CONSOLE_AND_FILE</b> =  0x03
+ }</td></tr>
+<tr class="memitem:ac91d55174d383848b976a34de843748e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>log_level</b> { <b>FATAL</b> =  0, 
+<b>ERROR</b>, 
+<b>INFO</b>, 
+<b>DEBUG</b>
+ }</td></tr>
+<tr class="memitem:a48191bcb8758fa6b3d3695f25c417490"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>log_policy</b> { <b>LOG_DELAY</b> =  0, 
+<b>LOG_DIRECT</b>
+ }</td></tr>
+<tr class="memitem:a4f7541b614232fd3a0aaf92a46abd441"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>dispatch_type</b> { <b>DISPATCH_UNBLOCK</b> =  0, 
+<b>DISPATCH_BLOCK</b>
+ }</td></tr>
+<tr class="memitem:a0696d269feb958d9f6fa2d0e1cf7e517"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>sock_type</b> { <b>TCP</b> =  SOCK_STREAM, 
+<b>UDP</b> =  SOCK_DGRAM
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8439e9a0cacc19cb3c5d0e09ef732da5"><td class="memItemLeft" align="right" valign="top">log_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a8439e9a0cacc19cb3c5d0e09ef732da5">log_create</a> ()</td></tr>
+<tr class="memdesc:a8439e9a0cacc19cb3c5d0e09ef732da5"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_create 创建日志库对象  <a href="#a8439e9a0cacc19cb3c5d0e09ef732da5"></a><br/></td></tr>
+<tr class="memitem:a7b1dcf40216b43ae92644c78bc6214cd"><td class="memItemLeft" align="right" valign="top">LOG_BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a7b1dcf40216b43ae92644c78bc6214cd">log_init</a> (log_t *this)</td></tr>
+<tr class="memdesc:a7b1dcf40216b43ae92644c78bc6214cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_init 初始化日志对象  <a href="#a7b1dcf40216b43ae92644c78bc6214cd"></a><br/></td></tr>
+<tr class="memitem:afcbd5aa8e2567555dae7be14d65e9c38"><td class="memItemLeft" align="right" valign="top">LOG_BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#afcbd5aa8e2567555dae7be14d65e9c38">log_set_file</a> (log_t *this, char *log_file, char *debug_file)</td></tr>
+<tr class="memdesc:afcbd5aa8e2567555dae7be14d65e9c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_set_file 为日志指定输出文件和调试文件  <a href="#afcbd5aa8e2567555dae7be14d65e9c38"></a><br/></td></tr>
+<tr class="memitem:a1c502c72d9a681f48bc591e97f67d5b0"><td class="memItemLeft" align="right" valign="top">LOG_BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a1c502c72d9a681f48bc591e97f67d5b0">log_set_socket</a> (log_t *this, char *ip, char *port, sock_type type)</td></tr>
+<tr class="memdesc:a1c502c72d9a681f48bc591e97f67d5b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_set_socket 为日志指定输出套接字  <a href="#a1c502c72d9a681f48bc591e97f67d5b0"></a><br/></td></tr>
+<tr class="memitem:aac210d6446f7ee849456051f75de6f4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#aac210d6446f7ee849456051f75de6f4e">log_destroy</a> (log_t *this)</td></tr>
+<tr class="memdesc:aac210d6446f7ee849456051f75de6f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_destroy 销毁日志  <a href="#aac210d6446f7ee849456051f75de6f4e"></a><br/></td></tr>
+<tr class="memitem:a279849657ac16a811c305abf99bc1f8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a279849657ac16a811c305abf99bc1f8c">log_disable</a> (log_t *this)</td></tr>
+<tr class="memdesc:a279849657ac16a811c305abf99bc1f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_disable 禁用日志，调用后日志无法输入和输出  <a href="#a279849657ac16a811c305abf99bc1f8c"></a><br/></td></tr>
+<tr class="memitem:a0abcb85e12414a0681b54b7864d2879b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a0abcb85e12414a0681b54b7864d2879b">log_enable</a> (log_t *this)</td></tr>
+<tr class="memdesc:a0abcb85e12414a0681b54b7864d2879b"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_enable 开启日志，重新开启日志功能  <a href="#a0abcb85e12414a0681b54b7864d2879b"></a><br/></td></tr>
+<tr class="memitem:ae212833f3631a98a108c88f2b7d122d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ae212833f3631a98a108c88f2b7d122d8">log_stop</a> (log_t *this)</td></tr>
+<tr class="memdesc:ae212833f3631a98a108c88f2b7d122d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_stop 停止日志调度  <a href="#ae212833f3631a98a108c88f2b7d122d8"></a><br/></td></tr>
+<tr class="memitem:a5144fe25dcfaf53d9b35e1c5d0bbc8c0"><td class="memItemLeft" align="right" valign="top">LOG_BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a> (log_t *this, log_mode mode, log_level level, char *category, char *fmt,...)</td></tr>
+<tr class="memdesc:a5144fe25dcfaf53d9b35e1c5d0bbc8c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_write 日志写入的接口  <a href="#a5144fe25dcfaf53d9b35e1c5d0bbc8c0"></a><br/></td></tr>
+<tr class="memitem:a84ad4da46783ae86a968c9fe00834df0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a84ad4da46783ae86a968c9fe00834df0">log_print_status</a> (log_t *this, FILE *stream)</td></tr>
+<tr class="memdesc:a84ad4da46783ae86a968c9fe00834df0"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_print_status 打印日志对象当前状态  <a href="#a84ad4da46783ae86a968c9fe00834df0"></a><br/></td></tr>
+<tr class="memitem:a291126c0120afada659580b96580d000"><td class="memItemLeft" align="right" valign="top">LOG_BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a291126c0120afada659580b96580d000">log_dispatch</a> (log_t *this, dispatch_type type)</td></tr>
+<tr class="memdesc:a291126c0120afada659580b96580d000"><td class="mdescLeft">&#160;</td><td class="mdescRight">log_dispatch 日志对象调度接口  <a href="#a291126c0120afada659580b96580d000"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>日志库 </p>
+<p>1.日志禁用接口是禁用日志写入接口，但不影响缓存中未写完的数据<br/>
+ 2.debug级别的日志默认写入debug_file文件中，如果没有设定那么写入log_file中<br/>
+ 3.每条日志不需要添加换行符，会自动添加<br/>
+ 4.Debug输出受限于是否定义ENABLE_DEBUG，所有调试信息在DEBUG标志关闭的情况下都无法输出，除非使用原始日志接口,需要在包含之前定义<br/>
+ 5.调试信息带有文件名，行号，函数名等调试数据<br/>
+ 6.使用非阻塞的添加方式，记录日志的记录总数和丢弃数<br/>
+ 7.由于系统使用了pthread,链接时使用-lpthread<br/>
+ 8.debug级别的日志使用行缓冲，其他级别暂时也使用行缓冲，尽量减少日志丢失的可能性<br/>
+ 9.提供FATAL，ERROR，DEBUG，INFO四种级别<br/>
+ 10.日志信息的输出设备支持三种:文件，终端，SOCKET。SOCKET同时支持使用UDP或者TCP进行连接, 使用nc -u -l 5468和nc -l 5468可以进行本机测试<br/>
+</p>
+<dl class="section author"><dt>作者:</dt><dd>tangfu - <a href="#" onclick="location.href='mai'+'lto:'+'abc'+'ta'+'ngf'+'uq'+'ian'+'g2'+'008'+'@1'+'63.'+'co'+'m'; return false;">abcta<span style="display: none;">.nosp@m.</span>ngfu<span style="display: none;">.nosp@m.</span>qiang<span style="display: none;">.nosp@m.</span>2008<span style="display: none;">.nosp@m.</span>@163.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
+<dl class="section version"><dt>版本:</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期:</dt><dd>2012-03-22 </dd></dl>
+</div><hr/><h2>宏定义说明</h2>
+<a class="anchor" id="a12d3175819816bfbac081e6871e8aa07"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_DEBUG_TO_CONSOLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">this, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;{}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section attention"><dt>注意:</dt><dd>开启ENABLE_DEBUG标记后，调试级别的日志信息才能正常输出，否则被注释掉了不会有任何效果 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae73e3891d62058a387f3bdc3f0e74b9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_FATAL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">this, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE_AND_FILE, FATAL, NULL, fmt, ##arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TO_CONSOLE_AND_FILE. </p>
+<p>将日志输入出到文件和终端的简化接口 </p>
+
+</div>
+</div>
+<a class="anchor" id="ad7112cc064e0a3cf8a2dd59e02e71ea6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_FATAL_TO_CONSOLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">this, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_CONSOLE, FATAL, NULL, fmt, ##arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TO_CONSOLE. </p>
+<p>将日志输入出到终端的简化接口 </p>
+
+</div>
+</div>
+<a class="anchor" id="a45ed43740e8268608070e134789ce002"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_FATAL_TO_FILE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">this, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_FILE, FATAL, NULL, fmt, ##arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TO_FILE. </p>
+<p>将日志输出到文件的简化接口 </p>
+
+</div>
+</div>
+<a class="anchor" id="af38399d1751a7cb7946645e4951b73c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_FATAL_TO_SOCKET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">this, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fmt, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">arg...&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="log_8h.html#a5144fe25dcfaf53d9b35e1c5d0bbc8c0">log_write</a>(this, TO_SOCKET, FATAL, NULL, fmt, ##arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>TO_SOCKET. </p>
+<p>将日志输出到套机字的简化接口 </p>
+
+</div>
+</div>
+<hr/><h2>函数说明</h2>
+<a class="anchor" id="a8439e9a0cacc19cb3c5d0e09ef732da5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">log_t* log_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_create 创建日志库对象 </p>
+<dl class="section return"><dt>返回:</dt><dd>日志库对象 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aac210d6446f7ee849456051f75de6f4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_destroy </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_destroy 销毁日志 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>参考 <a class="el" href="macro__helper_8h.html#ac11efaae72c247d6eb324ed67910f2b5">free_safe</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a279849657ac16a811c305abf99bc1f8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_disable </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log_disable 禁用日志，调用后日志无法输入和输出 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a291126c0120afada659580b96580d000"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_BOOL log_dispatch </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dispatch_type&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_dispatch 日志对象调度接口 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+    <tr><td class="paramname">type</td><td>阻塞方式，包括以阻塞方式调度或者以非阻塞方式调度</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回:</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0abcb85e12414a0681b54b7864d2879b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_enable </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log_enable 开启日志，重新开启日志功能 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7b1dcf40216b43ae92644c78bc6214cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_BOOL log_init </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_init 初始化日志对象 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志库对象指针</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回:</dt><dd>日志错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a84ad4da46783ae86a968c9fe00834df0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_print_status </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>stream</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_print_status 打印日志对象当前状态 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+    <tr><td class="paramname">stream</td><td>输出流 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="afcbd5aa8e2567555dae7be14d65e9c38"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_BOOL log_set_file </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>log_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>debug_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_set_file 为日志指定输出文件和调试文件 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象 </td></tr>
+    <tr><td class="paramname">log_file</td><td>日志默认输出文件 </td></tr>
+    <tr><td class="paramname">debug_file</td><td>默认调试文件</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回:</dt><dd>日志错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1c502c72d9a681f48bc591e97f67d5b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_BOOL log_set_socket </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sock_type&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_set_socket 为日志指定输出套接字 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象 </td></tr>
+    <tr><td class="paramname">ip</td><td>输出目标主机IP </td></tr>
+    <tr><td class="paramname">port</td><td>目标主机端口 </td></tr>
+    <tr><td class="paramname">type</td><td>协议类型TCP or UDP</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回:</dt><dd>日志错误码 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae212833f3631a98a108c88f2b7d122d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void log_stop </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_stop 停止日志调度 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5144fe25dcfaf53d9b35e1c5d0bbc8c0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LOG_BOOL log_write </td>
+          <td>(</td>
+          <td class="paramtype">log_t *&#160;</td>
+          <td class="paramname"><em>this</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">log_mode&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">log_level&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>category</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log_write 日志写入的接口 </p>
+<dl class="params"><dt>参数:</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>日志对象指针 </td></tr>
+    <tr><td class="paramname">mode</td><td>日志输出模式 </td></tr>
+    <tr><td class="paramname">level</td><td>日志级别 </td></tr>
+    <tr><td class="paramname">category</td><td>日志分类 </td></tr>
+    <tr><td class="paramname">fmt</td><td>日志消息的格式 </td></tr>
+    <tr><td class="paramname">...</td><td>变参...</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回:</dt><dd>日志错误码 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2012年 九月 17日 星期一 20:59:29 , 为 LOG-LIB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

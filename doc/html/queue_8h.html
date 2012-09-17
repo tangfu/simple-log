@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>LOG-LIB: queue.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOG-LIB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">queue.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>数据结构封装  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="macro__helper_8h_source.html">macro_helper.h</a>&quot;</code><br/>
+<code>#include &lt;pthread.h&gt;</code><br/>
+<code>#include &lt;semaphore.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="atomic_8h_source.html">atomic.h</a>&quot;</code><br/>
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> queue.h 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="queue_8h__incl.png" border="0" usemap="#queue_8h" alt=""/></div>
+<map name="queue_8h" id="queue_8h">
+</map>
+</div>
+</div>
+<p><a href="queue_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structqueue__s.html">queue_array</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a308f22429accd7cbb233ec1a2839c49f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a308f22429accd7cbb233ec1a2839c49f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QUEUE_OP_SUCCESS</b>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:a213395aad5beb12750d5dea08feedf6e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a213395aad5beb12750d5dea08feedf6e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QUEUE_OP_ERROR</b>&#160;&#160;&#160;-1</td></tr>
+<tr class="memitem:ae5392de5b985b628df64c82c801f0d68"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5392de5b985b628df64c82c801f0d68"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QUEUE_FULL</b>&#160;&#160;&#160;-2</td></tr>
+<tr class="memitem:a8b928421e9bb547953b629579d455bca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b928421e9bb547953b629579d455bca"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>QUEUE_EMPTY</b>&#160;&#160;&#160;-3</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:aa952863c9c2f0b302a95f9d8772e98cd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>QUEUE_TYPE</b> { <b>QUEUE_UNBLOCK</b> =  0, 
+<b>QUEUE_BLOCK</b>
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a8183855a2fb547b6688b0f06e9ab8b19"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8183855a2fb547b6688b0f06e9ab8b19"></a>
+queue_array *&#160;</td><td class="memItemRight" valign="bottom"><b>create_queue</b> ()</td></tr>
+<tr class="memitem:aeaba551a904c5279ea2b4380e6678be0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeaba551a904c5279ea2b4380e6678be0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>queue_destroy</b> (queue_array *)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>数据结构封装 </p>
+<p>1.可以进行重复初始化<br/>
+ 2.queue_element结构都根据自己的需要进行修改(一般都不需要)<br/>
+ typedef 自定义的结构 queue_element; 3. 4.</p>
+<dl class="section author"><dt>作者:</dt><dd>tangfu - <a href="#" onclick="location.href='mai'+'lto:'+'abc'+'ta'+'ngf'+'uq'+'ian'+'g2'+'008'+'@1'+'63.'+'co'+'m'; return false;">abcta<span style="display: none;">.nosp@m.</span>ngfu<span style="display: none;">.nosp@m.</span>qiang<span style="display: none;">.nosp@m.</span>2008<span style="display: none;">.nosp@m.</span>@163.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
+<dl class="section version"><dt>版本:</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>日期:</dt><dd>2011-10-17 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2012年 九月 17日 星期一 20:59:29 , 为 LOG-LIB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

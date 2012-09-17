@@ -64,94 +64,94 @@ extern "C" {
 #endif
 
 
-/**
- * @brief	log_create 创建日志库对象
- *
- * @return	日志库对象
- */
-log_t *log_create();
-/**
- * @brief	log_init 初始化日志对象
- *
- * @param	this	日志库对象指针
- *
- * @return	日志错误码
- */
-LOG_BOOL log_init( log_t *this );
-/**
- * @brief	log_set_file	为日志指定输出文件和调试文件
- *
- * @param	this			日志对象
- * @param	log_file		日志默认输出文件
- * @param	debug_file		默认调试文件
- *
- * @return	日志错误码
- */
-LOG_BOOL log_set_file( log_t *this, char *log_file,  char *debug_file );
-/**
- * @brief	log_set_socket	为日志指定输出套接字
- *
- * @param	this			日志对象
- * @param	ip				输出目标主机IP
- * @param	port			目标主机端口
- * @param	type			协议类型TCP or UDP
- *
- * @return	日志错误码
- */
-LOG_BOOL log_set_socket( log_t *this, char *ip, char *port, sock_type type );
-/**
- * @brief	log_destroy 销毁日志
- *
- * @param	this		日志对象指针
- */
-void log_destroy( log_t *this );
-/**
- * @brief	log_disable 禁用日志，调用后日志无法输入和输出
- *
- * @param	this		日志对象指针
- */
-void log_disable( log_t *this );
-/**
- * @brief	log_enable	开启日志，重新开启日志功能
- *
- * @param	this		日志对象指针
- */
-void log_enable( log_t *this );
-/**
- * @brief	log_stop	停止日志调度
- *
- * @param	this		日志对象指针
- */
-void log_stop( log_t *this );
-/**
- * @brief	log_write	日志写入的接口
- *
- * @param	this		日志对象指针
- * @param	mode		日志输出模式
- * @param	level		日志级别
- * @param	category	日志分类
- * @param	fmt			日志消息的格式
- * @param	...			变参...
- *
- * @return				日志错误码
- */
-LOG_BOOL log_write( log_t *this, log_mode mode, log_level level, char *category, char *fmt, ... );
-/**
- * @brief	log_print_status	打印日志对象当前状态
- *
- * @param	this				日志对象指针
- * @param	stream				输出流
- */
-void log_print_status( log_t *this , FILE *stream );
-/**
- * @brief	log_dispatch	日志对象调度接口
- *
- * @param	this			日志对象指针
- * @param	type			阻塞方式，包括以阻塞方式调度或者以非阻塞方式调度
- *
- * @return
- */
-LOG_BOOL log_dispatch( log_t *this, dispatch_type type );
+    /**
+     * @brief	log_create 创建日志库对象
+     *
+     * @return	日志库对象
+     */
+    log_t *log_create();
+    /**
+     * @brief	log_init 初始化日志对象
+     *
+     * @param	this	日志库对象指针
+     *
+     * @return	日志错误码
+     */
+    LOG_BOOL log_init(log_t *this);
+    /**
+     * @brief	log_set_file	为日志指定输出文件和调试文件
+     *
+     * @param	this			日志对象
+     * @param	log_file		日志默认输出文件
+     * @param	debug_file		默认调试文件
+     *
+     * @return	日志错误码
+     */
+    LOG_BOOL log_set_file(log_t *this, char *log_file,  char *debug_file);
+    /**
+     * @brief	log_set_socket	为日志指定输出套接字
+     *
+     * @param	this			日志对象
+     * @param	ip				输出目标主机IP
+     * @param	port			目标主机端口
+     * @param	type			协议类型TCP or UDP
+     *
+     * @return	日志错误码
+     */
+    LOG_BOOL log_set_socket(log_t *this, char *ip, char *port, sock_type type);
+    /**
+     * @brief	log_destroy 销毁日志
+     *
+     * @param	this		日志对象指针
+     */
+    void log_destroy(log_t *this);
+    /**
+     * @brief	log_disable 禁用日志，调用后日志无法输入和输出
+     *
+     * @param	this		日志对象指针
+     */
+    void log_disable(log_t *this);
+    /**
+     * @brief	log_enable	开启日志，重新开启日志功能
+     *
+     * @param	this		日志对象指针
+     */
+    void log_enable(log_t *this);
+    /**
+     * @brief	log_stop	停止日志调度
+     *
+     * @param	this		日志对象指针
+     */
+    void log_stop(log_t *this);
+    /**
+     * @brief	log_write	日志写入的接口
+     *
+     * @param	this		日志对象指针
+     * @param	mode		日志输出模式
+     * @param	level		日志级别
+     * @param	category	日志分类
+     * @param	fmt			日志消息的格式
+     * @param	...			变参...
+     *
+     * @return				日志错误码
+     */
+    LOG_BOOL log_write(log_t *this, log_mode mode, log_level level, char *category, char *fmt, ...);
+    /**
+     * @brief	log_print_status	打印日志对象当前状态
+     *
+     * @param	this				日志对象指针
+     * @param	stream				输出流
+     */
+    void log_print_status(log_t *this , FILE *stream);
+    /**
+     * @brief	log_dispatch	日志对象调度接口
+     *
+     * @param	this			日志对象指针
+     * @param	type			阻塞方式，包括以阻塞方式调度或者以非阻塞方式调度
+     *
+     * @return
+     */
+    LOG_BOOL log_dispatch(log_t *this, dispatch_type type);
 
 #ifdef __cplusplus
 }

@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>LOG-LIB: macro_helper.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">LOG-LIB
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.1 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a>  </div>
+  <div class="headertitle">
+<div class="title">macro_helper.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>通用的宏集合  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &lt;sys/time.h&gt;</code><br/>
+<code>#include &lt;time.h&gt;</code><br/>
+</div><div class="textblock"><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> macro_helper.h 的引用(Include)关系图:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="macro__helper_8h__incl.png" border="0" usemap="#macro__helper_8h" alt=""/></div>
+<map name="macro__helper_8h" id="macro__helper_8h">
+</map>
+</div>
+</div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> 此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="macro__helper_8h__dep__incl.png" border="0" usemap="#macro__helper_8hdep" alt=""/></div>
+<map name="macro__helper_8hdep" id="macro__helper_8hdep">
+</map>
+</div>
+</div>
+<p><a href="macro__helper_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:adb97414df8177596c2b149cf5f588ac8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#adb97414df8177596c2b149cf5f588ac8">forceinline</a></td></tr>
+<tr class="memitem:a217a0bd562b98ae8c2ffce44935351e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a217a0bd562b98ae8c2ffce44935351e1">likely</a>(x)&#160;&#160;&#160;__builtin_expect((x),1)</td></tr>
+<tr class="memitem:ac6c45889010c1bd68631771b64f18101"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6c45889010c1bd68631771b64f18101"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>unlikely</b>(x)&#160;&#160;&#160;__builtin_expect((x),0)</td></tr>
+<tr class="memitem:a075f0653cf536b16304ac3f139115933"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a075f0653cf536b16304ac3f139115933">between</a>(c, a, b)&#160;&#160;&#160;((c &gt; a &amp;&amp; c &lt; b) ? 1 : 0)</td></tr>
+<tr class="memdesc:a075f0653cf536b16304ac3f139115933"><td class="mdescLeft">&#160;</td><td class="mdescRight">基本的数学运算  <a href="#a075f0653cf536b16304ac3f139115933"></a><br/></td></tr>
+<tr class="memitem:aaf4e7e2aa81b2b6a100efe5a672b84ab"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaf4e7e2aa81b2b6a100efe5a672b84ab"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>is_even</b>(n)&#160;&#160;&#160;((n)%2 == 0)</td></tr>
+<tr class="memitem:a6dbf8d45b3bc0c6fec0c7584d2aaac3c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6dbf8d45b3bc0c6fec0c7584d2aaac3c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>square</b>(x)&#160;&#160;&#160;(x)*(x)</td></tr>
+<tr class="memitem:a8368822f21884eec2e99ce31c08b0df4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8368822f21884eec2e99ce31c08b0df4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>cube</b>(x)&#160;&#160;&#160;(x)*(x)*(x)</td></tr>
+<tr class="memitem:ac39d9cef6a5e030ba8d9e11121054268"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac39d9cef6a5e030ba8d9e11121054268"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>max</b>(x, y)&#160;&#160;&#160;{typeof(x) x_ = (x);typeof(y) y_ = (y);(x_&gt;y_) ? x_ : y_);}</td></tr>
+<tr class="memitem:abb702d8b501669a23aa0ab3b281b9384"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb702d8b501669a23aa0ab3b281b9384"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>min</b>(x, y)&#160;&#160;&#160;{typeof(x) x_ = (x);typeof(y) y_ = (y);(x_&lt;y_) ? x_ : y_);}</td></tr>
+<tr class="memitem:a21a1b93b00ad0c51e3ece47e1a65075f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>check_zero</b>(divisor)</td></tr>
+<tr class="memitem:a3ca5ecd34b04d6a243c054ac3a57f68d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3ca5ecd34b04d6a243c054ac3a57f68d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>swap</b>(a, b)&#160;&#160;&#160;swap_xor(a,b)</td></tr>
+<tr class="memitem:a1d0486d7d1e44b55fd926ec149701627"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1d0486d7d1e44b55fd926ec149701627"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>swap1</b>(a, b)&#160;&#160;&#160;{ typeof(a) _t = a; a = b; b = _t;}</td></tr>
+<tr class="memitem:a619f3c94b33b5a31fd4aa1d1871114be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a619f3c94b33b5a31fd4aa1d1871114be"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>swap2</b>(a, b)&#160;&#160;&#160;{ a = a + b;b = a - b; a = a - b;  }</td></tr>
+<tr class="memitem:ac3adc5b22402d6f1fd5d9493fc4b6f15"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac3adc5b22402d6f1fd5d9493fc4b6f15"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>swap_xor</b>(a, b)&#160;&#160;&#160;{ a ^= b;b ^= a;a ^= b; }</td></tr>
+<tr class="memitem:a552f13c8d6a974035a643a65aa020876"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a552f13c8d6a974035a643a65aa020876"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>mod</b>(X, M)&#160;&#160;&#160;= X &amp; (M-1)</td></tr>
+<tr class="memitem:a117f2129c8a5ed01ee6faef53fd35a84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a117f2129c8a5ed01ee6faef53fd35a84"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>get_integer_sign</b>(x)&#160;&#160;&#160;(-(x&lt;0))</td></tr>
+<tr class="memitem:ad22cf6ef7cdf423890665cfc4e244acf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad22cf6ef7cdf423890665cfc4e244acf"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>is_opposite_sign</b>(x, y)&#160;&#160;&#160;((x ^ y) &lt; 0)</td></tr>
+<tr class="memitem:af1db83efbed6cf5a5d5f3affa6cee33d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af1db83efbed6cf5a5d5f3affa6cee33d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>is_power_2</b>(x)&#160;&#160;&#160;( v &amp;&amp; !(x &amp; (x-1)) )</td></tr>
+<tr class="memitem:aa4f3440cec1ec1df1c28d54922af66aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#aa4f3440cec1ec1df1c28d54922af66aa">bitmap_bytes</a>(cnt)&#160;&#160;&#160;((cnt - 1) &gt;&gt; 3) + 1</td></tr>
+<tr class="memdesc:aa4f3440cec1ec1df1c28d54922af66aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">位图操作 bitmap_bytes 计算cnt个字节需要占用多少个位图字节 set_bit 设置位图的id位置为1 unset_bit 设置位图的id位置为0 test_bit 测试位图的id位是否为1  <a href="#aa4f3440cec1ec1df1c28d54922af66aa"></a><br/></td></tr>
+<tr class="memitem:a26bf072f715a228569e4340c49bb3cf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26bf072f715a228569e4340c49bb3cf9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a26bf072f715a228569e4340c49bb3cf9">set_bit</a>(pointer, id)&#160;&#160;&#160;*(pointer + ((id - 1) &gt;&gt; 3) ) |= (128U &gt;&gt; ((id - 1) &amp; 7))</td></tr>
+<tr class="memdesc:a26bf072f715a228569e4340c49bb3cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置位图的id位(设为1) <br/></td></tr>
+<tr class="memitem:aa331a2ca8981a461d92f1073f838eddc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa331a2ca8981a461d92f1073f838eddc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#aa331a2ca8981a461d92f1073f838eddc">unset_bit</a>(pointer, id)&#160;&#160;&#160;*(pointer + ((id - 1) &gt;&gt; 3)) &amp;= ~(128U &gt;&gt; ((id - 1) &amp; 7))</td></tr>
+<tr class="memdesc:aa331a2ca8981a461d92f1073f838eddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">取消位图的id位的设置(设为0) <br/></td></tr>
+<tr class="memitem:a08c746b671e30ee7b35a20b866d8fe3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a08c746b671e30ee7b35a20b866d8fe3d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a08c746b671e30ee7b35a20b866d8fe3d">test_bit</a>(pointer, id)&#160;&#160;&#160;(*(pointer + ((id - 1) &gt;&gt; 3)) &amp; (128U &gt;&gt; ((id - 1) &amp; 7)) != 0)</td></tr>
+<tr class="memdesc:a08c746b671e30ee7b35a20b866d8fe3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">测试位图的id位是否设置(是否为1) <br/></td></tr>
+<tr class="memitem:a7ecfd1cd61ccf86bf37e1e9d69835401"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a7ecfd1cd61ccf86bf37e1e9d69835401">set_bit_safe</a>(pointer, id)</td></tr>
+<tr class="memdesc:a7ecfd1cd61ccf86bf37e1e9d69835401"><td class="mdescLeft">&#160;</td><td class="mdescRight">安全设置位图  <a href="#a7ecfd1cd61ccf86bf37e1e9d69835401"></a><br/></td></tr>
+<tr class="memitem:a26afc5c04884de5d8f9e7bc2eb9d057e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a26afc5c04884de5d8f9e7bc2eb9d057e">unset_bit_safe</a>(pointer, id)</td></tr>
+<tr class="memdesc:a26afc5c04884de5d8f9e7bc2eb9d057e"><td class="mdescLeft">&#160;</td><td class="mdescRight">安全取消位图  <a href="#a26afc5c04884de5d8f9e7bc2eb9d057e"></a><br/></td></tr>
+<tr class="memitem:a58a41b2caeb85f96752e54a12b16c7d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a58a41b2caeb85f96752e54a12b16c7d2">__CALC_TIME_H__</a></td></tr>
+<tr class="memdesc:a58a41b2caeb85f96752e54a12b16c7d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">统计接口执行时间 1.使用gettimeofday来计时 initcalc_g 初始化 calcstart_g 开始计时 calc_g_func 调用函数接口 calcend_g 终止计时 calc_g 计算时间 calc_output_g 输出时间  <a href="#a58a41b2caeb85f96752e54a12b16c7d2"></a><br/></td></tr>
+<tr class="memitem:aa8cd559a6817b44ba885a382095f1c9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>initcalc_g</b>()</td></tr>
+<tr class="memitem:a2c16917334cd82b9e5acbc386b18f9bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calc_g_func</b>(func)</td></tr>
+<tr class="memitem:a34c83114b5b2692211ce7fee18eb3b77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcstart_g</b>()</td></tr>
+<tr class="memitem:a591fc99417f3e037039e4934e1113c35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcend_g</b>()</td></tr>
+<tr class="memitem:aaeb748471119e4041071bc0107fab729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calc_g</b>()</td></tr>
+<tr class="memitem:a6a4d5963d5d584e16b70cd27007b252d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcoutput_g</b>()</td></tr>
+<tr class="memitem:a838a60ca4aed42aa118a02b8d1356f93"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a838a60ca4aed42aa118a02b8d1356f93"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcresult_g</b>&#160;&#160;&#160;timeuse_g</td></tr>
+<tr class="memitem:a49d495dd04723f496173b2ac3836b6ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>initcalc_c</b>()</td></tr>
+<tr class="memitem:a599916945f4fdf8d73c06425cd6e8662"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calc_c_func</b>(func)</td></tr>
+<tr class="memitem:a186528580fc6a6c427a89bf96992be73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcstart_c</b>()</td></tr>
+<tr class="memitem:a03bc7e295607d44ee5c29d69de88f2cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcend_c</b>()</td></tr>
+<tr class="memitem:af249ab79f4192135153dba05e818ad29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calc_c</b>()</td></tr>
+<tr class="memitem:a7d9a01e15445e6972f93c2a567fce4de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcoutput_c</b>()</td></tr>
+<tr class="memitem:ae3c64fd3c7378b1b78c10ebced7f6f13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae3c64fd3c7378b1b78c10ebced7f6f13"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>calcresult_c</b>&#160;&#160;&#160;timeuse_c</td></tr>
+<tr class="memitem:a7888edb3637a7bd451df0ba2add84893"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7888edb3637a7bd451df0ba2add84893"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a7888edb3637a7bd451df0ba2add84893">upcase</a>(c)&#160;&#160;&#160;(((c) &gt;= 'a' &amp;&amp; (c) &lt;= 'z') ? ((c) - 0x20) : (c))</td></tr>
+<tr class="memdesc:a7888edb3637a7bd451df0ba2add84893"><td class="mdescLeft">&#160;</td><td class="mdescRight">字符串相关 upcase 将字符c转换为大写字符 lowcase 将字符c转换未小写字符 array_size 计算数组a的长度 <br/></td></tr>
+<tr class="memitem:a409ffaeee4909958bedf4f24257de245"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a409ffaeee4909958bedf4f24257de245"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>lowcase</b>(c)&#160;&#160;&#160;(((c) &gt;= 'A' &amp;&amp; (c) &lt;= 'Z') ? ((c) + 0x20) : (c))</td></tr>
+<tr class="memitem:acd5ac1808615eaad7b947d5237070cba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd5ac1808615eaad7b947d5237070cba"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>array_size</b>(a)&#160;&#160;&#160;(sizeof(a) / sizeof((a)[0]))</td></tr>
+<tr class="memitem:ac11efaae72c247d6eb324ed67910f2b5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac11efaae72c247d6eb324ed67910f2b5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#ac11efaae72c247d6eb324ed67910f2b5">free_safe</a>(x)&#160;&#160;&#160;{free(x);(x) = NULL;}</td></tr>
+<tr class="memdesc:ac11efaae72c247d6eb324ed67910f2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">malloc宏合集 free_safe 安全释放内存，同时设置指针未NULL malloc_safe 指定malloc一个type结构体 malloc_num_safe 指定分配num字节的空间 malloc_array_safe 指定分配number个type结构体 <br/></td></tr>
+<tr class="memitem:ac2c64b2e4aa34b44fd8cc317e5acb336"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2c64b2e4aa34b44fd8cc317e5acb336"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_safe</b>(type)&#160;&#160;&#160;((type *)malloc(sizeof(type)))</td></tr>
+<tr class="memitem:a52a36b851db414da1b3703115c6d71b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52a36b851db414da1b3703115c6d71b0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_num_safe</b>(num, type)&#160;&#160;&#160;((type *)malloc(num))</td></tr>
+<tr class="memitem:a336f3c358e7aa1d04fe9768b593d19b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a336f3c358e7aa1d04fe9768b593d19b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>malloc_array_safe</b>(number, type)&#160;&#160;&#160;((type *)malloc((number) * sizeof(type)))</td></tr>
+<tr class="memitem:a2af897657cc122fefcac9acfff84471e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2af897657cc122fefcac9acfff84471e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="macro__helper_8h.html#a2af897657cc122fefcac9acfff84471e">JOIN</a>(x, y)&#160;&#160;&#160;JOIN_AGAIN(x,y)</td></tr>
+<tr class="memdesc:a2af897657cc122fefcac9acfff84471e"><td class="mdescLeft">&#160;</td><td class="mdescRight">简单的异常处理宏 <br/></td></tr>
+<tr class="memitem:aa942da294f9f647d5cdc57f897d8f6b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa942da294f9f647d5cdc57f897d8f6b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>JOIN_AGAIN</b>(x, y)&#160;&#160;&#160;x ## y</td></tr>
+<tr class="memitem:a035558423808d112d927f99e80b6eaba"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a035558423808d112d927f99e80b6eaba"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>static_assert</b>(e)&#160;&#160;&#160;typedef char <a class="el" href="macro__helper_8h.html#a2af897657cc122fefcac9acfff84471e">JOIN</a>(assertion_failed_at_line, __LINE__) [(e) ? 1 : -1] [(e) ? 1 : -1]</td></tr>
+<tr class="memitem:adb70b8ac73b08c12e363b73fd3532ba1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb70b8ac73b08c12e363b73fd3532ba1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>Err</b>(fmt, arg...)&#160;&#160;&#160;fprintf(stderr,&quot;&quot;\033[31;1m&quot;[ ERROR ] : fmt&quot;\033[0m&quot;&quot;, ##arg)</td></tr>
+<tr class="memitem:ac1c4064627f6aded1b371de17c6fc9da"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac1c4064627f6aded1b371de17c6fc9da"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>Warn</b>(fmt, arg...)&#160;&#160;&#160;fprintf(stdout,&quot;&quot;\033[33m&quot;[ WARNING ] : fmt&quot;\033[0m&quot;&quot;, ##arg)</td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>详细描述</h2>
+<div class="textblock"><p>通用的宏集合 </p>
+<dl class="section author"><dt>作者:</dt><dd>tangfu - <a href="#" onclick="location.href='mai'+'lto:'+'abc'+'ta'+'ngf'+'uq'+'ian'+'g2'+'008'+'@1'+'63.'+'co'+'m'; return false;">abcta<span style="display: none;">.nosp@m.</span>ngfu<span style="display: none;">.nosp@m.</span>qiang<span style="display: none;">.nosp@m.</span>2008<span style="display: none;">.nosp@m.</span>@163.<span style="display: none;">.nosp@m.</span>com</a> </dd></dl>
+<dl class="section version"><dt>版本:</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>日期:</dt><dd>2011-03-27</dd></dl>
+<dl class="section attention"><dt>注意:</dt><dd>C standard macro : <b>DATE</b> "mm dd yy"(string) <b>FILE</b> current src filename(string) <b>LINE</b> current line no(integer) <b>TIME</b> "hh：mm：ss"(string) <b>func</b> current func name(string) </dd></dl>
+</div><hr/><h2>宏定义说明</h2>
+<a class="anchor" id="a58a41b2caeb85f96752e54a12b16c7d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __CALC_TIME_H__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>统计接口执行时间 1.使用gettimeofday来计时 initcalc_g 初始化 calcstart_g 开始计时 calc_g_func 调用函数接口 calcend_g 终止计时 calc_g 计算时间 calc_output_g 输出时间 </p>
+<p>2.使用clock_gettime来计时 initcalc_c 初始化 calcstart_c 开始计时 calc_c_func 调用函数接口 calcend_c 终止计时 calc_c 计算时间 calc_output_c 输出时间 </p>
+
+</div>
+</div>
+<a class="anchor" id="a075f0653cf536b16304ac3f139115933"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define between</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">c, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((c &gt; a &amp;&amp; c &lt; b) ? 1 : 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>基本的数学运算 </p>
+<p>between 判断c是否处于a，b之间，是返回1，否则返回0 is_even 判断n是否是偶数 square x的平方 cube x的立方 max 取x，y的最大值 min 取x，y的最小值 swap 交换a和b的值 mod 取X对于M的余数 get_interger_sign x为正数返回0，负数返回-1 is_opposite_sign x,y符号相反返回1，符号相同返回0 is_power_2 x是2的幂返回1，否则返回0 </p>
+
+</div>
+</div>
+<a class="anchor" id="aa4f3440cec1ec1df1c28d54922af66aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define bitmap_bytes</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cnt</td><td>)</td>
+          <td>&#160;&#160;&#160;((cnt - 1) &gt;&gt; 3) + 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>位图操作 bitmap_bytes 计算cnt个字节需要占用多少个位图字节 set_bit 设置位图的id位置为1 unset_bit 设置位图的id位置为0 test_bit 测试位图的id位是否为1 </p>
+<dl class="section attention"><dt>注意:</dt><dd>位图id从1开始计算位图所占字节数 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af249ab79f4192135153dba05e818ad29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calc_c</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        timeuse_c = 1000000000 * (tpend_c.tv_sec - tpstart_c.tv_sec) + (tpend_c.tv_nsec - tpstart_c.tv_nsec); \</div>
+<div class="line">        timeuse_c /= 1000;\</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a599916945f4fdf8d73c06425cd6e8662"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calc_c_func</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        clock_gettime(CLOCK_REALTIME, &amp;tpstart_c); \</div>
+<div class="line">        func; \</div>
+<div class="line">        clock_gettime(CLOCK_REALTIME, &amp;tpend_c); \</div>
+<div class="line">        timeuse_c = 1000000000 * (tpend_c.tv_sec - tpstart_c.tv_sec) + (tpend_c.tv_nsec - tpstart_c.tv_nsec); \</div>
+<div class="line">        timeuse_c /= 1000;\</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aaeb748471119e4041071bc0107fab729"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calc_g</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        timeuse_g = 1000000 * (tpend_g.tv_sec - tpstart_g.tv_sec) + (tpend_g.tv_usec - tpstart_g.tv_usec); \</div>
+<div class="line">        timeuse_g /= 1000;\</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a2c16917334cd82b9e5acbc386b18f9bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calc_g_func</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        gettimeofday(&amp;tpstart_g, NULL); \</div>
+<div class="line">        func; \</div>
+<div class="line">        gettimeofday(&amp;tpend_g, NULL); \</div>
+<div class="line">        timeuse_g = 1000000 * (tpend_g.tv_sec - tpstart_g.tv_sec) + (tpend_g.tv_usec - tpstart_g.tv_usec); \</div>
+<div class="line">        timeuse_g /= 1000;\</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a03bc7e295607d44ee5c29d69de88f2cd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcend_c</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        clock_gettime(CLOCK_REALTIME, &amp;tpend_c);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a591fc99417f3e037039e4934e1113c35"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcend_g</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        gettimeofday(&amp;tpend_g, NULL);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7d9a01e15445e6972f93c2a567fce4de"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcoutput_c</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        printf(<span class="stringliteral">&quot;[%.5Fus] &quot;</span>, timeuse_c);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a6a4d5963d5d584e16b70cd27007b252d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcoutput_g</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        printf(<span class="stringliteral">&quot;[%.5Fms] &quot;</span>, timeuse_g);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a186528580fc6a6c427a89bf96992be73"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcstart_c</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        clock_gettime(CLOCK_REALTIME, &amp;tpstart_c);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a34c83114b5b2692211ce7fee18eb3b77"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define calcstart_g</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        gettimeofday(&amp;tpstart_g, NULL);\</div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a21a1b93b00ad0c51e3ece47e1a65075f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define check_zero</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">divisor</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span> (divisor == 0)  \</div>
+<div class="line">       printf(<span class="stringliteral">&quot;*** Attempt to divide by zero on line %d  &quot;</span>  \</div>
+<div class="line">       <span class="stringliteral">&quot;of file %s  ***\n&quot;</span>,__LINE__, __FILE__)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="adb97414df8177596c2b149cf5f588ac8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define forceinline</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>设置强制内联，windows和linux都能使用 </p>
+
+</div>
+</div>
+<a class="anchor" id="a49d495dd04723f496173b2ac3836b6ad"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define initcalc_c</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>timespec tpstart_c;\</div>
+<div class="line">        struct timespec tpend_c;\</div>
+<div class="line">        double timeuse_c;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aa8cd559a6817b44ba885a382095f1c9a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define initcalc_g</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keyword">struct </span>timeval tpstart_g;\</div>
+<div class="line">        struct timeval tpend_g;\</div>
+<div class="line">        double timeuse_g;</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a217a0bd562b98ae8c2ffce44935351e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define likely</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;__builtin_expect((x),1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>分支预测功能， </p>
+
+</div>
+</div>
+<a class="anchor" id="a7ecfd1cd61ccf86bf37e1e9d69835401"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define set_bit_safe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pointer, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>{  \</div>
+<div class="line">    if(pointer != NULL)\</div>
+<div class="line">        *(pointer + ((<span class="keywordtype">id</span> - 1) &gt;&gt; 3) ) |= (128U &gt;&gt; ((<span class="keywordtype">id</span> - 1) &amp; 7));\</div>
+<div class="line">    } <span class="keywordflow">while</span>(0);</div>
+</div><!-- fragment -->
+<p>安全设置位图 </p>
+
+</div>
+</div>
+<a class="anchor" id="a26afc5c04884de5d8f9e7bc2eb9d057e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define unset_bit_safe</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pointer, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span>{  \</div>
+<div class="line">    if(pointer != NULL)\</div>
+<div class="line">        *(pointer + ((<span class="keywordtype">id</span> - 1) &gt;&gt; 3)) &amp;= ~(128U &gt;&gt; ((<span class="keywordtype">id</span> - 1) &amp; 7));\</div>
+<div class="line">    } <span class="keywordflow">while</span>(0);</div>
+</div><!-- fragment -->
+<p>安全取消位图 </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+生成于 2012年 九月 17日 星期一 20:59:29 , 为 LOG-LIB使用  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.1
+</small></address>
+</body>
+</html>

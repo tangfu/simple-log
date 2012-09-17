@@ -31,36 +31,36 @@ typedef struct queue_s queue_array;
 typedef enum QUEUE_ACTION_TYPE_S {QUEUE_UNBLOCK = 0, QUEUE_BLOCK } QUEUE_TYPE;
 
 struct queue_s {
-        int ( *init )( queue_array *, int , int );
-        void ( *reset )( queue_array * );
-        int ( *resize )( queue_array *, int );
-        int ( *get_size )( queue_array * );
-        int ( *get_current_len )( queue_array * );
-        int ( *in_queue )( queue_array *, void * , QUEUE_TYPE );
-        int ( *out_queue )( queue_array *, void * , QUEUE_TYPE );
-        int ( *is_empty )( queue_array * );
-        int ( *is_full )( queue_array * );
+    int (*init)(queue_array *, int , int);
+    void (*reset)(queue_array *);
+    int (*resize)(queue_array *, int);
+    int (*get_size)(queue_array *);
+    int (*get_current_len)(queue_array *);
+    int (*in_queue)(queue_array *, void * , QUEUE_TYPE);
+    int (*out_queue)(queue_array *, void * , QUEUE_TYPE);
+    int (*is_empty)(queue_array *);
+    int (*is_full)(queue_array *);
 
-        pthread_rwlock_t lock;
+    pthread_rwlock_t lock;
 
-        sem_t empty;
-        sem_t resource;
-        sem_t reader;
-        sem_t writer;
+    sem_t empty;
+    sem_t resource;
+    sem_t reader;
+    sem_t writer;
 
-        volatile int size;
-        int element_size;
-        void *element;
+    volatile int size;
+    int element_size;
+    void *element;
 
-        volatile int  in_index;
-        volatile int out_index;
-        volatile int init_flag;
-        atomic_t cur_count;
+    volatile int  in_index;
+    volatile int out_index;
+    volatile int init_flag;
+    atomic_t cur_count;
 
-        volatile int used_max;		//只在入队时使用，入队操作全部互斥，因此不用原子操作
-        volatile int drop_count;		//由于队列满而丢弃点入队操作，不用原子操作理由通上
+    volatile int used_max;		//只在入队时使用，入队操作全部互斥，因此不用原子操作
+    volatile int drop_count;		//由于队列满而丢弃点入队操作，不用原子操作理由通上
 };
 
 queue_array *create_queue();
-void queue_destroy( queue_array * );
+void queue_destroy(queue_array *);
 #endif /* __QUEUE_H__  */
