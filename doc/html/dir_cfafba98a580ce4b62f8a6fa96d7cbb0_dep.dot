@@ -1,9 +1,0 @@
-digraph G {
-  bgcolor=transparent;
-  compound=true
-  node [ fontsize="10", fontname="FreeSans.ttf"];
-  edge [ labelfontsize="10", labelfontname="FreeSans.ttf"];
-  dir_cfafba98a580ce4b62f8a6fa96d7cbb0 [shape=box, label="example", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_cfafba98a580ce4b62f8a6fa96d7cbb0.html"];
-  dir_68267d1309a1af8e8297ef4c3efbcdba [shape=box label="src" URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"];
-  dir_cfafba98a580ce4b62f8a6fa96d7cbb0->dir_68267d1309a1af8e8297ef4c3efbcdba [headlabel="1", labeldistance=1.5 headhref="dir_000005_000000.html"];
-}
